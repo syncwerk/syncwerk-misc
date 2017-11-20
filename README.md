@@ -1,13 +1,5 @@
 # syncwerk-misc
 
-## Hotfix - Enable Syncwerk office preview on Debian Stretch
-```
-cd /usr/src/
-wget https://github.com/syncwerk/syncwerk-misc/blob/master/syncwerk-python-uno_4.3.3-2+deb8u7_amd64.tgz?raw=true -O syncwerk-python-uno_4.3.3-2+deb8u7_amd64.tgz
-tar xzf syncwerk-python-uno_4.3.3-2+deb8u7_amd64.tgz
-cp -a  syncwerk-python-uno_4.3.3-2+deb8u7_amd64/usr/* /usr/
-```
-
 ## syncwerk-find-0-byte-files-replace-with-latest-SFConfict-version
 
 **Caution:** BETA script - Make backups before executing script
@@ -60,4 +52,30 @@ chmod +x /usr/local/bin/syncwerk-find-and-move-duplicates
 ```
 cd /c/Users/jdoe/Syncwerk/My\ Library
 syncwerk-find-and-move-duplicates
+```
+
+## Hotfix - Purge file-locking on servers which experience increased syncing issues
+
+**Download**
+```
+wget https://raw.githubusercontent.com/syncwerk/syncwerk-misc/master/syncwerk-purge-file-locks -O /usr/local/sbin/syncwerk-purge-file-locks
+
+chmod 700 /usr/local/sbin/syncwerk-purge-file-locks
+```
+
+**Run manually**
+```
+syncwerk-purge-file-locks
+```
+
+**Run automatically**
+
+Setup cronjob to purge file-locks continously. 
+
+## Hotfix - Enable Syncwerk office preview on Debian Stretch
+```
+cd /usr/src/
+wget https://github.com/syncwerk/syncwerk-misc/blob/master/syncwerk-python-uno_4.3.3-2+deb8u7_amd64.tgz?raw=true -O syncwerk-python-uno_4.3.3-2+deb8u7_amd64.tgz
+tar xzf syncwerk-python-uno_4.3.3-2+deb8u7_amd64.tgz
+cp -a  syncwerk-python-uno_4.3.3-2+deb8u7_amd64/usr/* /usr/
 ```
