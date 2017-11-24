@@ -32,7 +32,7 @@ find "$(pwd)" -type d ! -name "syncwerk-found-duplicates" | while read dir ; do
 
   # Move duplicate files to subfolder "duplicates" within the found directory. Log actions...
   cat dups_tmp3.txt | tail -n +2 | cut -c 5- | while read delfile ; do
-    echo $(date) - Duplicate - ${delfile} moved to ${dir}/syncwerk-found-duplicates/ ; mkdir -p "${dir}/syncwerk-found-duplicates" ; mv "${delfile}" "${dir}/syncwerk-found-duplicates/" ; done | tee -a syncwerk-find-and-move-duplicates.log
+    echo $(date) - Duplicate - /${delfile} moved to ${dir}/syncwerk-found-duplicates/ ; mkdir -p "${dir}/syncwerk-found-duplicates" ; mv /"${delfile}" "${dir}/syncwerk-found-duplicates/" ; done | tee -a syncwerk-find-and-move-duplicates.log
   done
 
   # Cleanup: Delete temp files
