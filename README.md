@@ -9,23 +9,32 @@
 **Limitations:** Does not support files without extension.
 
 ### Install
-The script can be used on Windows, Linux and possibly macOS (untested).
+The script can be used on Windows, Linux and macOS.
 
 #### Windows
-Install MSYS2 from http://www.msys2.org/. Run the following commands in the MSYS2 shell.
+
+**Download**
+
+Download from https://raw.githubusercontent.com/syncwerk/syncwerk-misc/master/syncwerk-find-0-byte-files-replace-with-latest-SFConfict-version.bat
+
+**Usage:**
+
+Place `syncwerk-find-0-byte-files-replace-with-latest-SFConfict-version.bat` into the root directory of your library. Then double-click to execute it.
+
+#### Linux and macOS
 
 **Download**
 ```
 mkdir -p /usr/local/bin
-wget https://raw.githubusercontent.com/syncwerk/syncwerk-misc/master/syncwerk-find-0-byte-files-replace-with-latest-SFConfict-version -O /usr/local/bin/syncwerk-find-0-byte-files-replace-with-latest-SFConfict-version
+wget https://raw.githubusercontent.com/syncwerk/syncwerk-misc/master/syncwerk-find-0-byte-files-replace-with-latest-SFConfict-version -O /usr/local/bin/syncwerk-find-0-byte-files-replace-with-latest-SFConfict-version.sh
 
-chmod +x /usr/local/bin/syncwerk-find-0-byte-files-replace-with-latest-SFConfict-version
+chmod +x /usr/local/bin/syncwerk-find-0-byte-files-replace-with-latest-SFConfict-version.sh
 ```
 
-**Usage:** Change into directory which you want to scan for 0-byte files recursively. Then call `syncwerk-find-0-byte-files-replace-with-latest-SFConfict-version`
+**Usage:** Change into directory which you want to scan for 0-byte files recursively. Then call `syncwerk-find-0-byte-files-replace-with-latest-SFConfict-version.sh`
 ```
 cd /c/Users/jdoe/Syncwerk/My\ Library
-syncwerk-find-0-byte-files-replace-with-latest-SFConfict-version
+syncwerk-find-0-byte-files-replace-with-latest-SFConfict-version.sh
 ```
 
 ## syncwerk-find-and-move-duplicates
@@ -43,29 +52,29 @@ Install MSYS2 from http://www.msys2.org/. Run the following commands in the MSYS
 **Download**
 ```
 mkdir -p /usr/local/bin
-wget https://raw.githubusercontent.com/syncwerk/syncwerk-misc/master/syncwerk-find-and-move-duplicates -O /usr/local/bin/syncwerk-find-and-move-duplicates
+wget https://raw.githubusercontent.com/syncwerk/syncwerk-misc/master/syncwerk-find-and-move-duplicates.sh -O /usr/local/bin/syncwerk-find-and-move-duplicates.sh
 
-chmod +x /usr/local/bin/syncwerk-find-and-move-duplicates
+chmod +x /usr/local/bin/syncwerk-find-and-move-duplicates.sh
 ```
 
 **Usage:** Change into directory which you want to scan for duplicates files recursively. Then call `syncwerk-find-and-move-duplicates`
 ```
 cd /c/Users/jdoe/Syncwerk/My\ Library
-syncwerk-find-and-move-duplicates
+syncwerk-find-and-move-duplicates.sh
 ```
 
 ## Hotfix - Purge file-locking on servers which experience increased syncing issues
 
 **Download**
 ```
-wget https://raw.githubusercontent.com/syncwerk/syncwerk-misc/master/syncwerk-purge-file-locks -O /usr/local/sbin/syncwerk-purge-file-locks
+wget https://raw.githubusercontent.com/syncwerk/syncwerk-misc/master/syncwerk-purge-file-locks.sh -O /usr/local/sbin/syncwerk-purge-file-locks.sh
 
-chmod 700 /usr/local/sbin/syncwerk-purge-file-locks
+chmod 700 /usr/local/sbin/syncwerk-purge-file-locks.sh
 ```
 
 **Run manually**
 ```
-syncwerk-purge-file-locks
+syncwerk-purge-file-locks.sh
 ```
 
 **Run automatically**
