@@ -1,6 +1,6 @@
 # syncwerk-misc
 
-## syncwerk-find-0-byte-files-replace-with-latest-SFConfict-version
+## syncwerk-find-0-byte-files-replace-with-latest-SFConfict-version.[bat|sh]
 
 **Caution:** BETA script - Make backups before executing script
 
@@ -37,11 +37,11 @@ cd /c/Users/jdoe/Syncwerk/My\ Library
 syncwerk-find-0-byte-files-replace-with-latest-SFConfict-version.sh
 ```
 
-## syncwerk-find-and-move-duplicates
+## syncwerk-find-and-move-duplicates.sh
 
 **Caution:** BETA script - Make backups before executing script
 
-**About:** Finds duplicate files within each directory by comparing the md5 checksums. Duplicate files are then moved to a sub-folder named `syncwerk-found-duplicates`. This script is mainly intended to find duplicate "SFConflict" files but will also find other duplicate files.
+**About:** Finds duplicate files within each directory by comparing the md5 checksums. Duplicate files are then moved to a sub-folder named `syncwerk-found-duplicates.sh`. This script is mainly intended to find duplicate "SFConflict" files but will also find other duplicate files.
 
 ### Install
 The script can be used on Windows, Linux and possibly macOS (untested).
